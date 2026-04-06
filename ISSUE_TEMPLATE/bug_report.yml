@@ -1,0 +1,59 @@
+name: Bug Report
+description: Something isn't working right
+title: "[Bug]: "
+labels: ["type: bug", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the sections below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear description of what went wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Run `npx yclaw init`
+        2. Configure X
+        3. Run `npx yclaw deploy`
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: YCLAW version
+      description: Output of `npx yclaw --version` or git commit
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment method
+      options:
+        - Docker Compose
+        - AWS Terraform
+        - Manual
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste any error messages or logs
+      render: shell

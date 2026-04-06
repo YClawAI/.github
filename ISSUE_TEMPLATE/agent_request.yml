@@ -1,0 +1,39 @@
+name: Agent / Skill Request
+description: Propose a new agent role or agent skill
+title: "[Agent]: "
+labels: ["type: feature", "agent-request", "status: needs-triage"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request type
+      options:
+        - New agent role
+        - New agent skill
+        - Agent behavior change
+        - Agent integration
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this agent/skill do?
+    validations:
+      required: true
+  - type: input
+    id: department
+    attributes:
+      label: Department
+      description: Which department would this belong to?
+      placeholder: "e.g., marketing, development, operations"
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Triggers & actions
+      description: When should this activate? What actions should it take?
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links, examples, or references
