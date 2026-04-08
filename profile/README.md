@@ -1,0 +1,1 @@
+Open-source AI agent orchestration framework. Deploy autonomous AI organizations with 12 agents, 6 departments, and full governance — steered by your AI assistant.
